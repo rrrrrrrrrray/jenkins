@@ -44,7 +44,7 @@ pipelineJob("dsl/job-just-test") {
                           url(git_jks_conf)
                           credentialsId('')
                           name('origin')
-                          refspec('+refs/heads/*:refs/remotes/jenkins-ci/*')
+                          refspec('')
                           browser {
                             github {
                               repoUrl("https://github.com/")
@@ -57,7 +57,7 @@ pipelineJob("dsl/job-just-test") {
                           url(git_jks_job)
                           credentialsId('')
                           name('origin1')
-                          refspec('+refs/heads/*:refs/remotes/sms-gateway/*')
+                          refspec('')
                           browser {
                             github {
                               repoUrl("https://github.com/")
