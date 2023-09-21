@@ -68,7 +68,7 @@ pipelineJob("dsl/job-just-test") {
                       }
                       branches {
                         branchSpec {
-                          name("main")
+                          name("master")
                           }
                         }
                     }
