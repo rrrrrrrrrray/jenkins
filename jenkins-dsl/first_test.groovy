@@ -38,40 +38,17 @@ pipelineJob("dsl/job-just-test") {
         definition {
             cpsScm {
                 scm {
-                    gitSCM {
-                      userRemoteConfigs {
-                        userRemoteConfig {
-                          url(git_jks_job)
-                          credentialsId('')
-                          name('origin')
-                          refspec('')
-                          browser {
-                            github {
-                              repoUrl("https://github.com/")
-                            }
-                          }
-                          gitTool("/opt/homebrew/bin/git")
-                        }
-                        
-                        userRemoteConfig {
-                          url(git_jks_conf)
-                          credentialsId('')
-                          name('origin1')
-                          refspec('')
-                          browser {
-                            github {
-                              repoUrl("https://github.com/")
-                            }
-                          }
-                          gitTool("/opt/homebrew/bin/git")
-                        }
-                      }
-                      branches {
-                        branchSpec {
-                          name("master")
-                          }
-                        }
+                  git {
+                    remote {
+                        name('origin')
+                        url(git_jks_job)
                     }
+                    remote {
+                        name('upstream')
+                        url(git_jks_conf)
+                    }
+                    branch('master')
+                  }
                 }
 
                 scriptPath("nconf/Jenkinsfile")
