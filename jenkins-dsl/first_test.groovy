@@ -51,7 +51,7 @@ pipelineJob("dsl/job-just-test") {
                   }
                 }
 
-                scriptPath("nconf/Jenkinsfile")
+                scriptPath("Jenkinsfile")
 
             }
         }
