@@ -19,7 +19,7 @@ pipelineJob("dsl/job-just-test") {
                 tagFilter('*')
                 sortMode('NONE')
                 selectedValue('NONE')
-                useRepository($GIT_URL_JOB)
+                useRepository(GIT_URL_JOB)
                 quickFilterEnabled(true)
                 listSize('8')
                 requiredParameter(false)
@@ -32,7 +32,7 @@ pipelineJob("dsl/job-just-test") {
                     gitSCM {
                       userRemoteConfigs {
                         userRemoteConfig {
-                          url($GIT_URL_JOB)
+                          url(GIT_URL_JOB)
                           credentialsId()
                           name('origin')
                           refspec('+refs/heads/*:refs/remotes/jenkins-ci/*')
@@ -46,7 +46,7 @@ pipelineJob("dsl/job-just-test") {
                         }
                         
                         userRemoteConfig {
-                          url($GIT_URL_JOB)
+                          url(GIT_URL_JOB)
                           credentialsId()
                           name('origin1')
                           refspec('+refs/heads/*:refs/remotes/sms-gateway/*')
