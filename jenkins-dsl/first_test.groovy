@@ -24,7 +24,7 @@ pipelineJob("dsl/job-just-test") {
                 defaultValue('main')
                 description('')
                 branch('')
-                branchFilter('origin/(.*)')
+                branchFilter('upstream/(.*)')
                 tagFilter('*')
                 sortMode('NONE')
                 selectedValue('NONE')
@@ -41,11 +41,11 @@ pipelineJob("dsl/job-just-test") {
                   git {
                     remote {
                         name('origin')
-                        url(git_jks_job)
+                        url(git_jks_conf)
                     }
                     remote {
                         name('upstream')
-                        url(git_jks_conf)
+                        url(git_jks_job)
                     }
                     branch('master')
                   }
