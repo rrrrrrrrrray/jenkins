@@ -74,7 +74,7 @@ pipelineJob("dsl/job-just-test") {
                     }
                 }
 
-                scriptPath("JenkinsFiles/none-prod-golang-jenkinsfile")
+                scriptPath("Jenkinsfile")
 
             }
         }
