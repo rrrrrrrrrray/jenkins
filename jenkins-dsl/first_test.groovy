@@ -1,8 +1,8 @@
 pipelineJob("dsl/job-just-test") {
-        environmentVariables(
+        environmentVariables {
             env('GIT_URL_JOB', "https://github.com/rrrrrrrrrray/vms.git")
             env('GIT_URL_CONF', "https://github.com/rrrrrrrrrray/nconf.git")
-        )
+        }
 
         logRotator {
             numToKeep(3)
