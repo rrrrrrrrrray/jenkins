@@ -46,9 +46,8 @@ pipelineJob("dsl/job-just-test") {
                           name('origin')
                           refspec('+refs/heads/*:refs/remotes/jenkins-ci/*')
                           browser {
-                            gitLab {
+                            github {
                               repoUrl("https://github.com/")
-                              version("15.3")
                             }
                           }
                           gitTool("/opt/homebrew/bin/git")
@@ -60,9 +59,8 @@ pipelineJob("dsl/job-just-test") {
                           name('origin1')
                           refspec('+refs/heads/*:refs/remotes/sms-gateway/*')
                           browser {
-                            gitLab {
+                            github {
                               repoUrl("https://github.com/")
-                              version("15.3")
                             }
                           }
                           gitTool("/opt/homebrew/bin/git")
