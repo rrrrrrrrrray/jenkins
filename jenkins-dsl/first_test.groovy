@@ -24,7 +24,7 @@ pipelineJob("dsl/job-just-test") {
                 defaultValue('main')
                 description('')
                 branch('')
-                branchFilter('origin1/(.*)')
+                branchFilter('origin/(.*)')
                 tagFilter('*')
                 sortMode('NONE')
                 selectedValue('NONE')
@@ -41,7 +41,7 @@ pipelineJob("dsl/job-just-test") {
                     gitSCM {
                       userRemoteConfigs {
                         userRemoteConfig {
-                          url(git_jks_conf)
+                          url(git_jks_job)
                           credentialsId('')
                           name('origin')
                           refspec('')
@@ -54,7 +54,7 @@ pipelineJob("dsl/job-just-test") {
                         }
                         
                         userRemoteConfig {
-                          url(git_jks_job)
+                          url(git_jks_conf)
                           credentialsId('')
                           name('origin1')
                           refspec('')
