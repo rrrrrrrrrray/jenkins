@@ -42,7 +42,6 @@ pipelineJob("dsl/job-just-test") {
                       userRemoteConfigs {
                         userRemoteConfig {
                           url(git_jks_conf)
-                          // credentialsId()
                           name('origin')
                           refspec('+refs/heads/*:refs/remotes/jenkins-ci/*')
                           browser {
@@ -56,7 +55,6 @@ pipelineJob("dsl/job-just-test") {
                         
                         userRemoteConfig {
                           url(git_jks_job)
-                          // credentialsId()
                           name('origin1')
                           refspec('+refs/heads/*:refs/remotes/sms-gateway/*')
                           browser {
